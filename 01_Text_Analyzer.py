@@ -154,7 +154,6 @@ print(
     f'-> Počet čísel: {p_cisel}'
 )
 
-
 line()
 print(
     f'-> Suma všech čísel v textu: {sum_cisel}'
@@ -169,8 +168,6 @@ for x in spl_text:
             mnoz += 1
     len_slov.append(mnoz)
 
-print(len_slov)
-
 jme_mnoz = {}
 for x in len_slov:
     if x not in jme_mnoz: 
@@ -178,22 +175,28 @@ for x in len_slov:
     else:
         jme_mnoz[x] += 1
 
-print(jme_mnoz)
-
 sort_jme_mnoz = sorted(jme_mnoz)
 
 max_len = max(jme_mnoz.values())
 
-print(max_len)
 
 line()
 print(
-    f'LEN|  OCCURENCES  |NR.'
+    f'{"LEN| OCCURENCES":<{max_len + 5}} |NR.'
 )
-line()
 
+line()
 for x in sort_jme_mnoz:
     if x < 10:
-        print(f'  {x}|{("*" * jme_mnoz.get(x)):<{max_len + 1}}|{str(jme_mnoz.get(x))}')
+        print(
+            f'  {x}|', 
+            f'{("*" * jme_mnoz.get(x)):<{max_len}} |' + 
+            f'{jme_mnoz.get(x)}'
+        )
     else: 
-        print(f' {str(x)}|{("*" * jme_mnoz.get(x)):<{max_len + 1}}|{str(jme_mnoz.get(x))}')
+        print(
+            f' {x}|', 
+            f'{("*" * jme_mnoz.get(x)):<{max_len}} |' + 
+            f'{jme_mnoz.get(x)}'
+        )
+line()
