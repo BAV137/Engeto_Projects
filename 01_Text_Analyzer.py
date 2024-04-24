@@ -116,7 +116,6 @@ print(
 )
 
 
-line()
 ps_zvp = sum(
     1 for x in spl_text if x[0].istitle()
 )
@@ -125,7 +124,6 @@ print(
 )
 
 
-line()
 ps_pvp = sum(
     1 for x in spl_text if x.isalpha() and x.isupper()
 )
@@ -134,7 +132,6 @@ print(
 )
 
 
-line()
 ps_pm = sum(
     1 for x in spl_text if x.islower()
 )
@@ -143,7 +140,6 @@ print(
 )
 
 
-line()
 p_cisel = 0
 sum_cisel = 0
 for x in spl_text:
@@ -154,7 +150,6 @@ print(
     f'-> Počet čísel: {p_cisel}'
 )
 
-line()
 print(
     f'-> Suma všech čísel v textu: {sum_cisel}'
 )
@@ -199,4 +194,4 @@ for x in sort_jme_mnoz:
             f'{("*" * jme_mnoz.get(x)):<{max_len}} |' + 
             f'{jme_mnoz.get(x)}'
         )
-line()
+line('^', 79)
