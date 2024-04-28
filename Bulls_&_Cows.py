@@ -67,4 +67,27 @@ while len(u_n) != 4:
         '-> Enter four DIFFERENT numbers pls.'
     )
     exit()
-    
+
+bulls = 0
+cows = 0
+index = 0
+
+for x in user_num: 
+    if x in secret and x == secret[index]:
+        bulls += 1
+    elif x in secret and x != secret[index]: 
+        cows += 1
+    index += 1
+
+if bulls == 0 and cows == 0:
+    print(
+        '-> Sorry, u dont tip any numbers :('
+    )
+elif bulls == 4:
+    print(
+        'Congrat! U WON!'
+    )
+else:
+    print(
+        f'Bulls: {bulls} / Cows: {cows}'
+    )
